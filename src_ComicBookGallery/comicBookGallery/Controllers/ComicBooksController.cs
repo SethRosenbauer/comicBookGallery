@@ -14,9 +14,14 @@ namespace comicBookGallery.Controllers
          *All methods on a Controller are responsible for performing any actions that need
           that need to be performed before a request
         */
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from the Comic books controller";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+
+            }
+                return Content("Hello from the comic books controller");
         }
         public IActionResult Index()
         {
