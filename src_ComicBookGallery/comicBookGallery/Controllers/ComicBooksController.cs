@@ -8,8 +8,16 @@ using comicBookGallery.Models;
 
 namespace comicBookGallery.Controllers
 {
-    public class HomeController : Controller
+    public class ComicBooksController : Controller
     {
+        /*
+         *All methods on a Controller are responsible for performing any actions that need
+          that need to be performed before a request
+        */
+        public string Detail()
+        {
+            return "Hello from the Comic books controller";
+        }
         public IActionResult Index()
         {
             return View();
